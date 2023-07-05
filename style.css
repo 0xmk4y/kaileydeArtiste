@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('./fonts/dahlia-medium.woff2') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h2 {
+    transform-style: preserve-3d;
+    transform: translateZ(1em);
+    opacity: 1;
+    font-size: 20rem;
+    font-family: 'MyFont';
+}
+
+.name{
+    position: relative;
+    display: inline-block;
+    transform: none;
+    opacity: 1;
+    font-family: 'MyFont';
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.card {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.image-container:hover .image-description {
+    opacity: 1;
+    animation: fade-in 1s ease;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.show {
+    opacity: 1;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.whatsapp-button img {
+    width: 70px;
+    height: 70px;
+}
