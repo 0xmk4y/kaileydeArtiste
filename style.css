@@ -1,27 +1,7 @@
-@font-face {
-    font-family: 'MyFont';
-    src: url('./fonts/dahlia-medium.woff2') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+.hh{
+    font-family: 'Open Sans', sans-serif;
 }
-
-h2 {
-    transform-style: preserve-3d;
-    transform: translateZ(1em);
-    opacity: 1;
-    font-size: 20rem;
-    font-family: 'MyFont';
-}
-
-.name{
-    position: relative;
-    display: inline-block;
-    transform: none;
-    opacity: 1;
-    font-family: 'MyFont';
-
-}
-
 .grid-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -87,14 +67,3 @@ h2 {
     opacity: 1;
 }
 
-.whatsapp-button {
-    position: fixed;
-    bottom: 30px;
-    right: 20px;
-    z-index: 9999;
-}
-
-.whatsapp-button img {
-    width: 70px;
-    height: 70px;
-}
