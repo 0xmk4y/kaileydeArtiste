@@ -8,3 +8,5 @@ imageDescriptions.forEach(function (description) {
         }, 1500);
     });
 });
+
+

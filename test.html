@@ -1,0 +1,59 @@
+<html>
+    <style>
+        html, body{
+  background-color: #e74c3c;
+}
+.wrapper{
+  width:100%;
+  padding-top: 20px;
+  text-align:center;
+}
+h2{
+  font-family:sans-serif;
+  color:#fff;
+}
+.carousel{
+  width:90%;
+  margin:0px auto;
+}
+.slick-slide{
+  margin:10px;
+}
+.slick-slide img{
+  width:100%;
+  border: 2px solid #fff;
+}
+.wrapper .slick-dots li button:before {
+  font-size:20px;
+  color:white;
+}
+    </style>
+
+    <body>
+        <div class="wrapper">
+            <h2>Slick Carousel Example<h2>
+                    <div class="carousel">
+                        <div><img src="https://picsum.photos/300/200?random=1"></div>
+                        <div><img src="https://picsum.photos/300/200?random=2"></div>
+                        <div><img src="https://picsum.photos/300/200?random=3"></div>
+                        <div><img src="https://picsum.photos/300/200?random=4"></div>
+                        <div><img src="https://picsum.photos/300/200?random=5"></div>
+                        <div><img src="https://picsum.photos/300/200?random=6"></div>
+                    </div>
+        </div>
+
+    </body>
+
+
+    <script>
+        $(document).ready(function () {
+                $('.carousel').slick({
+                    slidesToShow: 3,
+                    dots: true,
+                    centerMode: true,
+                });
+            });
+
+// Slick version 1.5.8
+    </script>
+</html>
