@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdn.tailwindcss.com"></script>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../style.css">
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>KaileydaArtiste</title>
@@ -21,7 +21,7 @@
                     <span class="self-center text-2xl font-semibold whitespace-nowrap">Flowbite</span>
                 </a>
                 <div class="flex md:order-2">
-                    <a href="https://example.com/booking">
+                    <a href="../booking/">
                         <button type="button"
                             class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 self-center font-semibold whitespace-nowrap">Booking</button>
                     </a>
@@ -38,23 +38,51 @@
                 </div>
                 <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                     <ul
-                        class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-gradient-to-r from-purple-600 to-emerald-600">
+                        class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-transparent">
                         <li>
-                            <a href="index.html"
-                                class="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded md:bg-transparent md:p-0 md:text-2xl font-semibold"
+                            <a href="../index.html"
+                                class="block py-2 pl-3 pr-4 bg-purple-700 rounded md:bg-transparent md:p-0 md:text-2xl font-semibold"
                                 aria-current="page">Home</a>
                         </li>
                         <li>
-                            <a href="about.html"
+                            <a href="../about.html"
                                 class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 text-white md:text-2xl font-semibold">About</a>
                         </li>
+        
                         <li>
-                            <a href="services.html"
-                                class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 text-white md:text-2xl font-semibold">Services</a>
+                            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                                class="flex items-center justify-between w-full py-2 pl-3 pr-4 rounded  md:hover:bg-transparent md:border-0 md:hover:text-purple-800 md:p-0 md:w-auto md:text-2xl font-semibold">Services
+                                <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="m1 1 4 4 4-4" />
+                                </svg></button>
+                            <!-- dropdown -->
+                            <div id="dropdownNavbar"
+                                class="z-10 hidden font-normal divide-y divide-purple-100 rounded-lg shadow w-44 -mt-4">
+                                <ul class="py-2 bg-transparent"
+                                    aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="makeup.html" class="block px-4 py-2 hover:text-green-500">Makeup</a>
+                                    </li>
+                                    <li>
+                                        <a href="costumes.html"
+                                            class="block px-4 py-2 hover:text-green-500">Costumes</a>
+                                    </li>
+                                    <li>
+                                        <a href="creative-drections.html"
+                                            class="block px-4 py-2 hover:text-green-500">Creative directions</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:text-green-500">Royal
+                                            Sales</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                         <li>
-                            <a href="contact.html"
-                                class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 text-white md:text-2xl font-semibold">Contact</a>
+                            <a href="../contact.html"
+                                class="block py-2 pl-3 pr-4 rounded hover:bg-purple-200 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 text-white md:text-2xl font-semibold">Contact</a>
                         </li>
                     </ul>
                 </div>
