@@ -83,7 +83,7 @@
 }
 
 .image-container {
-    animation: zoom-in 1s ease-out;
+    animation: zoom-in 2s ease-out;
     animation-fill-mode: forwards;
     opacity: 0;
 }

@@ -12,10 +12,10 @@
         <title>KaileydaArtiste</title>
     </head>
 
-    <body class="h-screen bg-gradient-to-r from-purple-400 to-emerald-600">
+    <body class="bg-gradient-to-r from-purple-400 to-emerald-600">
 
         <!-- navbar -->
-        <nav class="w-full z-20 top-0 left-0">
+        <nav class="w-full z-20 top-0 left-0 fixed bg-gradient-to-r from-purple-400 to-emerald-600">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="https://flowbite.com/" class="flex items-center">
                     <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo">
@@ -51,34 +51,27 @@
                         </li>
         
                         <li>
-                            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
-                                class="flex items-center justify-between w-full py-2 pl-3 pr-4 rounded  md:hover:bg-transparent md:border-0 md:hover:text-purple-800 md:p-0 md:w-auto md:text-2xl font-semibold">Services
-                                <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 10 6">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="m1 1 4 4 4-4" />
-                                </svg></button>
-                            <!-- dropdown -->
-                            <div id="dropdownNavbar"
-                                class="z-10 hidden font-normal divide-y divide-purple-100 rounded-lg shadow w-44 -mt-4">
-                                <ul class="py-2 bg-gradient-to-r from-purple-400 to-emerald-600 rounded-2xl"
-                                    aria-labelledby="dropdownLargeButton">
-                                    <li>
-                                        <a href="services/makeup.html" class="block px-4 py-2 hover:text-green-500">Makeup</a>
-                                    </li>
-                                    <li>
-                                        <a href="services/costumes.html"
-                                            class="block px-4 py-2 hover:text-green-500">Costumes</a>
-                                    </li>
-                                    <li>
-                                        <a href="services/creative-drections.html"
-                                            class="block px-4 py-2 hover:text-green-500">Creative directions</a>
-                                    </li>
-                                    <li>
-                                        <a href="services/royal-sales.html" class="block px-4 py-2 hover:text-green-500">Royal
-                                            Sales</a>
-                                    </li>
-                                </ul>
+                            <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-transparent" data-inactive-classes="">
+                                <h2 id="accordion-flush-heading-1">
+                                    <button class="flex items-center text-white md:text-2xl font-semibold pl-3 w-full"
+                                        data-accordion-target="#accordion-flush-body-1" aria-expanded="false"
+                                        aria-controls="accordion-flush-body-1">
+                                        <span class="mr-2">Services</span>
+                                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5 5 1 1 5" />
+                                        </svg>
+                                    </button>
+                                </h2>
+                                <div id="accordion-flush-body-1" class="hidden md:fixed" aria-labelledby="accordion-flush-heading-1">
+                                    <div class="md:py-2 text-left relative pl-4 md:pl-0 flex flex-col bg-purple-500 ">
+                                        <a href="services/makeup.html" class="hover:bg-purple-100 p-2 font-bold">Makeup</a>
+                                        <a href="services/costumes.html" class="hover:bg-purple-100 p-2 font-bold">Costumes</a>
+                                        <a href="services/creative-drections.html" class="hover:bg-purple-100 p-2 font-bold">Creative Directions</a>
+                                        <a href="services/royal-sales.html" class="hover:bg-purple-100 p-2 font-bold">Royal Sales</a>
+                                    </div>
+                                </div>
                             </div>
                         </li>
                         <li>
@@ -92,10 +85,10 @@
 
         <!-- grid content -->
         <div
-            class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12 px-5 mx-auto max-w-7xl lg:mt-10">
+            class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12 px-5 mx-auto max-w-7xl mt-[70px] lg:mt-[100px] ">
             <div class="lg:pl-20 py-10 flex justify-center lg:block">
-                <div class="max-w-xs px-2.5"><img alt=""
-                        class="image-container rotate-3 rounded-2xl object-cover"
+                <div class="max-w-xs px-2.5 rotate-2"><img alt=""
+                        class="image-container rounded-2xl object-cover"
                         style="color: transparent;" sizes="(min-width: 1024px) 32rem, 20rem" src="img/gallery/gallery-00.jpeg"
                         width="800" height="1000">
                 </div>

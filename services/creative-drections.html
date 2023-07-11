@@ -12,16 +12,79 @@
         <title>KaileydaArtiste</title>
     </head>
 
+
+    <style>
+        section {
+  color: #FFF;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.column {
+  margin: 2%;
+  flex: 1 1 0;
+  position: relative;
+  padding: 5px;
+  min-height: 33vh;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: all ease-in-out .3s;
+  min-width: calc(33.33% / 2);
+}
+section:nth-of-type(5) .column:first-of-type {
+  flex-grow: 2;
+  flex-shrink: 2;
+  flex-basis: 22px;
+}
+section:nth-of-type(6) .column:nth-of-type(2) {
+  flex-grow: 4;
+  flex-shrink: 4;
+  flex-basis: 66px;
+}
+.column img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: all ease-in-out .5s;
+}
+.column:hover {
+    color: rgba(0, 0, 0, 0.75);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+/* Color Overlay position */
+.column::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all ease-in-out .5s;
+}
+/* Removed effects to show original on hover */
+.column:hover::after, .column:hover, .column:hover img{
+  filter: none;
+  -webkit-filter: none;
+  mix-blend-mode: unset !important;
+  background: transparent;
+}
+    </style>
+
     <body class="h-screen bg-gradient-to-r from-purple-400 to-emerald-600">
         <!-- navbar -->
-        <nav class="w-full z-20 top-0 left-0">
+        <nav class="w-full z-20 top-0 left-0 fixed bg-gradient-to-r from-purple-400 to-emerald-600">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="https://flowbite.com/" class="flex items-center">
                     <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo">
                     <span class="self-center text-2xl font-semibold whitespace-nowrap">Flowbite</span>
                 </a>
                 <div class="flex md:order-2">
-                    <a href="../booking/">
+                    <a href="booking/">
                         <button type="button"
                             class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 self-center font-semibold whitespace-nowrap">Booking</button>
                     </a>
@@ -50,32 +113,31 @@
                         </li>
         
                         <li>
-                            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
-                                class="flex items-center justify-between w-full py-2 pl-3 pr-4 rounded  md:hover:bg-transparent md:border-0 md:hover:text-purple-800 md:p-0 md:w-auto md:text-2xl font-semibold">Services
-                                <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 10 6">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="m1 1 4 4 4-4" />
-                                </svg></button>
-                            <!-- dropdown -->
-                            <div id="dropdownNavbar"
-                                class="z-10 hidden font-normal divide-y divide-purple-100 rounded-lg shadow w-44 -mt-4">
-                                <ul class="py-2 bg-transparent" aria-labelledby="dropdownLargeButton">
-                                    <li>
-                                        <a href="makeup.html" class="block px-4 py-2 hover:text-green-500">Makeup</a>
-                                    </li>
-                                    <li>
-                                        <a href="costumes.html" class="block px-4 py-2 hover:text-green-500">Costumes</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block px-4 py-2 hover:text-green-500">Creative
-                                            directions</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block px-4 py-2 hover:text-green-500">Royal
+                            <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-transparent"
+                                data-inactive-classes="">
+                                <h2 id="accordion-flush-heading-1">
+                                    <button class="flex items-center text-white md:text-2xl font-semibold pl-3 w-full"
+                                        data-accordion-target="#accordion-flush-body-1" aria-expanded="false"
+                                        aria-controls="accordion-flush-body-1">
+                                        <span class="mr-2">Services</span>
+                                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="M9 5 5 1 1 5" />
+                                        </svg>
+                                    </button>
+                                </h2>
+                                <div id="accordion-flush-body-1" class="hidden md:fixed"
+                                    aria-labelledby="accordion-flush-heading-1">
+                                    <div class="md:py-2 text-left relative pl-4 md:pl-0 flex flex-col bg-purple-500 ">
+                                        <a href="makeup.html" class="hover:bg-purple-100 p-2 font-bold">Makeup</a>
+                                        <a href="costumes.html" class="hover:bg-purple-100 p-2 font-bold">Costumes</a>
+                                        <a href="creative-drections.html"
+                                            class="hover:bg-purple-100 p-2 font-bold">Creative Directions</a>
+                                        <a href="royal-sales.html" class="hover:bg-purple-100 p-2 font-bold">Royal
                                             Sales</a>
-                                    </li>
-                                </ul>
+                                    </div>
+                                </div>
                             </div>
                         </li>
                         <li>
@@ -86,6 +148,83 @@
                 </div>
             </div>
         </nav>
+
+        <div class="flex justify-center text-4xl md:text-6xl font-extrabold py-5 md:py-10 mt-[70px]">
+            <h1>Creative directions</h1>
+        </div>
+        <!-- gallery -->
+        <div class="">
+            <section class="image-container">
+                <div class="column green"><img
+                        src="https://images.pexels.com/photos/60883/girl-eyes-makeup-sexy-60883.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" />
+                </div>
+                <div class="column red-purple"><img
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/girl-eyes-makeup-sexy-60883.jpeg" /></div>
+            </section>
+            <!-- <section>
+                            <div class="column vintage"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/pexels-photo.jpg" /></div>
+                            <div class="column retro"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/pexels-photo-194074.jpg" />
+                            </div>
+                            <div class="column blue-light"><img
+                                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/pexels-photo-207081.jpeg" /></div>
+                        
+                            <div class="column blue"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/pexels-157675.jpeg" /></div>
+                        
+                            <div class="column dark-red"><img
+                                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/pexels-photo-432059.jpeg" /></div>
+                            <div class="column flat-retro"><img
+                                    src="https://images.pexels.com/photos/167483/pexels-photo-167483.jpeg?h=350&auto=compress" /></div>
+                        </section> -->
+        
+        
+        
+        
+        
+            <section class="image-container">
+                <div class="column teal"><img
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/pexels-photo-305241.jpeg" />
+                </div>
+                <div class="column purple"><img
+                        src="https://images.pexels.com/photos/164732/pexels-photo-164732.jpeg?h=350&auto=compress&cs=tinysrgb" />
+                </div>
+                <div class="column pink"><img
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/pexels-photo-175696.jpeg" />
+                </div>
+            </section>
+        
+            <section class="image-container">
+                <div class="column yellow"><img
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/pexels-photo-704977.jpeg" /></div>
+                <div class="column orange"><img
+                        src="https://images.pexels.com/photos/157920/woman-face-curly-hair-157920.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" />
+                </div>
+            </section>
+        </div>
+        
+        
+        
+        <!-- footer -->
+        <div class="mx-auto max-w-7xl lg:px-8">
+            <div class="border-t border-zinc-100 pb-16 pt-10 /40">
+                <div class="relative px-4 sm:px-8 lg:px-12">
+                    <div class="mx-auto max-w-2xl lg:max-w-5xl">
+                        <div class="flex flex-col items-center  gap-6 sm:flex-row md:pr-20">
+                            <div class="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium ">
+                                <a class="transition hover:text-purple-500 " href="about.html">Look
+                                    Book</a><a class="transition hover:text-purple-500 " href="/projects">Beauty Makeup</a><a
+                                    class="transition hover:text-purple-500 " href="/speaking">Creative Makeup</a><a
+                                    class="transition hover:text-purple-500 " href="/uses">Costumes
+                                    Hair</a>
+                                <a class="transition hover:text-purple-500 " href="/uses">Creative
+                                    Direction Campaigns</a>
+                            </div>
+                            <p class="text-sm text-purple-800">© <!-- -->2023<!-- --> KaileydaArtiste. All rights
+                                reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
