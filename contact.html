@@ -12,10 +12,10 @@
         <title>KaileydaArtiste</title>
     </head>
 
-    <body class="bg-gradient-to-r from-purple-400 to-emerald-600">
+    <body class="bg-gray-100">
 
         <!-- navbar -->
-        <nav class="w-full z-20 top-0 left-0 bg-gradient-to-r from-purple-400 to-emerald-600 fixed">
+        <nav class="w-full z-20 top-0 left-0 bg-gray-100 fixed">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="https://flowbite.com/" class="flex items-center">
                     <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo">
@@ -42,18 +42,18 @@
                         class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-transparent">
                         <li>
                             <a href="index.html"
-                                class="block py-2 pl-3 pr-4 bg-purple-700 rounded md:bg-transparent md:p-0 md:text-2xl font-semibold"
+                                class="block py-2 pl-3 pr-4 rounded md:p-0 md:text-2xl font-semibold hover:text-purple-700"
                                 aria-current="page">Home</a>
                         </li>
                         <li>
                             <a href="about.html"
-                                class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 text-white md:text-2xl font-semibold">About</a>
+                                class="block py-2 pl-3 pr-4 rounded md:hover:text-purple-700 md:p-0 md:text-2xl font-semibold">About</a>
                         </li>
         
                         <li>
                             <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-transparent" data-inactive-classes="">
                                 <h2 id="accordion-flush-heading-1">
-                                    <button class="flex items-center text-white md:text-2xl font-semibold pl-3 w-full"
+                                    <button class="flex items-center text-white md:text-2xl font-semibold pl-3 my-2 md:my-0  w-full"
                                         data-accordion-target="#accordion-flush-body-1" aria-expanded="false"
                                         aria-controls="accordion-flush-body-1">
                                         <span class="mr-2">Services</span>
@@ -65,18 +65,19 @@
                                     </button>
                                 </h2>
                                 <div id="accordion-flush-body-1" class="hidden md:fixed" aria-labelledby="accordion-flush-heading-1">
-                                    <div class="md:py-2 text-left relative pl-4 md:pl-0 flex flex-col bg-purple-500 ">
-                                        <a href="services/makeup.html" class="hover:bg-purple-100 p-2 font-bold">Makeup</a>
-                                        <a href="services/costumes.html" class="hover:bg-purple-100 p-2 font-bold">Costumes</a>
-                                        <a href="services/creative-drections.html" class="hover:bg-purple-100 p-2 font-bold">Creative Directions</a>
-                                        <a href="services/royal-sales.html" class="hover:bg-purple-100 p-2 font-bold">Royal Sales</a>
+                                    <div class="md:py-2 text-left relative pl-4 md:pl-0 flex flex-col bg-gray-200 md:w-[300px]">
+                                        <a href="services/makeup.html" class="md:hover:bg-purple-500 p-2 font-bold md:hover:text-white">Makeup</a>
+                                        <a href="services/costumes.html" class="md:hover:bg-purple-500 p-2 font-bold md:hover:text-white">Costumes</a>
+                                        <a href="services/creative-drections.html" class="md:hover:bg-purple-500 p-2 font-bold md:hover:text-white">Creative
+                                            Directions</a>
+                                        <a href="services/royal-sales.html" class="md:hover:bg-purple-500 p-2 font-bold md:hover:text-white">Royal Sales</a>
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li>
-                            <a href="contact.html"
-                                class="block py-2 pl-3 pr-4 rounded hover:bg-purple-200 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 text-white md:text-2xl font-semibold">Contact</a>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 bg-purple-700  md:bg-transparent rounded hover:bg-purple-200 md:hover:bg-transparent text-white md:text-purple-700 md:p-0 md:text-2xl font-semibold">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -88,16 +89,17 @@
         </div> -->
 
         <!-- hero -->
-        <div class="h-[200px]  md:h-80 bg-cover bg-center w-auto">
+        <div class="h-[250px] md:h-80 bg-cover bg-center w-auto">
             <div class="flex justify-center items-center full h-full ">
-                <h1 class="mb-4 text-3xl font-extrabold text-purple-900 md:text-5xl lg:text-6xl"><span class="text-transparent text-white">Contact US</span></h1>
+                <h1 class="text-3xl font-extrabold text-purple-700 md:text-5xl lg:text-6xl">Contact US</h1>
             </div>
         </div>
 
 
 
         <section class="flex flex-col md:flex-row justify-center">
-            <div class="flex flex-col px-5 pt-5 md:p-10 m-2 md:mt-10 rounded-3xl shadow-2xl">
+            <!-- card -->
+            <div class="flex flex-col px-5 pt-5 md:p-10 m-2 md:mt-10 rounded-3xl shadow-2xl bg-gray-200 md:hover:shadow-purple-400 md:mx-10">
                 <h2 class="text-2xl font-bold mb-2">Get in touch</h2>
                 <p class="mb-5 md:mb-10">Contact or follow us</p>
 
@@ -107,41 +109,41 @@
                         <li class="flex"><a
                                 class="group flex text-sm font-medium  transition hover:text-purple-500"
                                 href="/about#"><svg viewBox="0 0 24 24" aria-hidden="true"
-                                    class="h-6 w-6 flex-none fill-emerald-500 transition group-hover:fill-emerald-500">
+                                    class="h-6 w-6 flex-none fill-purple-500 transition group-hover:fill-purple-500">
                                     <path
                                         d="M20.055 7.983c.011.174.011.347.011.523 0 5.338-3.92 11.494-11.09 11.494v-.003A10.755 10.755 0 0 1 3 18.186c.308.038.618.057.928.058a7.655 7.655 0 0 0 4.841-1.733c-1.668-.032-3.13-1.16-3.642-2.805a3.753 3.753 0 0 0 1.76-.07C5.07 13.256 3.76 11.6 3.76 9.676v-.05a3.77 3.77 0 0 0 1.77.505C3.816 8.945 3.288 6.583 4.322 4.737c1.98 2.524 4.9 4.058 8.034 4.22a4.137 4.137 0 0 1 1.128-3.86A3.807 3.807 0 0 1 19 5.274a7.657 7.657 0 0 0 2.475-.98c-.29.934-.9 1.729-1.713 2.233A7.54 7.54 0 0 0 22 5.89a8.084 8.084 0 0 1-1.945 2.093Z">
                                     </path>
-                                </svg><span class="ml-4 hover:text-emerald-500">Twitter</span></a></li>
+                                </svg><span class="ml-4 hover:text-purple-500">Twitter</span></a></li>
                         <li class="mt-4 flex"><a
                                 class="group flex text-sm font-medium  transition hover:text-purple-500"
                                 href="_kailey_da_artiste"><svg viewBox="0 0 24 24" aria-hidden="true"
-                                    class="h-6 w-6 flex-none fill-emerald-500 transition group-hover:fill-emerald-500">
+                                    class="h-6 w-6 flex-none fill-purple-500 transition group-hover:fill-purple-500">
                                     <path
                                         d="M12 3c-2.444 0-2.75.01-3.71.054-.959.044-1.613.196-2.185.418A4.412 4.412 0 0 0 4.51 4.511c-.5.5-.809 1.002-1.039 1.594-.222.572-.374 1.226-.418 2.184C3.01 9.25 3 9.556 3 12s.01 2.75.054 3.71c.044.959.196 1.613.418 2.185.23.592.538 1.094 1.039 1.595.5.5 1.002.808 1.594 1.038.572.222 1.226.374 2.184.418C9.25 20.99 9.556 21 12 21s2.75-.01 3.71-.054c.959-.044 1.613-.196 2.185-.419a4.412 4.412 0 0 0 1.595-1.038c.5-.5.808-1.002 1.038-1.594.222-.572.374-1.226.418-2.184.044-.96.054-1.267.054-3.711s-.01-2.75-.054-3.71c-.044-.959-.196-1.613-.419-2.185A4.412 4.412 0 0 0 19.49 4.51c-.5-.5-1.002-.809-1.594-1.039-.572-.222-1.226-.374-2.184-.418C14.75 3.01 14.444 3 12 3Zm0 1.622c2.403 0 2.688.009 3.637.052.877.04 1.354.187 1.67.31.421.163.72.358 1.036.673.315.315.51.615.673 1.035.123.317.27.794.31 1.671.043.95.052 1.234.052 3.637s-.009 2.688-.052 3.637c-.04.877-.187 1.354-.31 1.67-.163.421-.358.72-.673 1.036a2.79 2.79 0 0 1-1.035.673c-.317.123-.794.27-1.671.31-.95.043-1.234.052-3.637.052s-2.688-.009-3.637-.052c-.877-.04-1.354-.187-1.67-.31a2.789 2.789 0 0 1-1.036-.673 2.79 2.79 0 0 1-.673-1.035c-.123-.317-.27-.794-.31-1.671-.043-.95-.052-1.234-.052-3.637s.009-2.688.052-3.637c.04-.877.187-1.354.31-1.67.163-.421.358-.72.673-1.036.315-.315.615-.51 1.035-.673.317-.123.794-.27 1.671-.31.95-.043 1.234-.052 3.637-.052Z">
                                     </path>
                                     <path
                                         d="M12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm0-7.622a4.622 4.622 0 1 0 0 9.244 4.622 4.622 0 0 0 0-9.244Zm5.884-.182a1.08 1.08 0 1 1-2.16 0 1.08 1.08 0 0 1 2.16 0Z">
                                     </path>
-                                </svg><span class="ml-4 hover:text-emerald-500">Instagram</span></a></li>
+                                </svg><span class="ml-4 hover:text-purple-500">Instagram</span></a></li>
                         <li class="mt-4 flex"><a
                                 class="group flex text-sm font-medium  transition hover:text-purple-500"
                                 href="/about#"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                    class="bi bi-youtube h-6 w-6 fill-emerald-500 transition" viewBox="0 0 16 16">
+                                    class="bi bi-youtube h-6 w-6 fill-purple-500 transition" viewBox="0 0 16 16">
                                     <path
                                         d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
-                                </svg><span class="ml-4 hover:text-emerald-500">Youtube</span></a></li>
+                                </svg><span class="ml-4 hover:text-purple-500">Youtube</span></a></li>
                         <li class="mt-4 flex"><a
                                 class="group flex text-sm font-medium  transition hover:text-purple-500"
                                 href="/about#"><svg viewBox="0 0 24 24" aria-hidden="true"
-                                    class="h-6 w-6 flex-none fill-emerald-500 transition group-hover:fill-emerald-500">
+                                    class="h-6 w-6 flex-none fill-purple-500 transition group-hover:fill-purple-500">
                                     <path
                                         d="M18.335 18.339H15.67v-4.177c0-.996-.02-2.278-1.39-2.278-1.389 0-1.601 1.084-1.601 2.205v4.25h-2.666V9.75h2.56v1.17h.035c.358-.674 1.228-1.387 2.528-1.387 2.7 0 3.2 1.778 3.2 4.091v4.715zM7.003 8.575a1.546 1.546 0 01-1.548-1.549 1.548 1.548 0 111.547 1.549zm1.336 9.764H5.666V9.75H8.34v8.589zM19.67 3H4.329C3.593 3 3 3.58 3 4.297v15.406C3 20.42 3.594 21 4.328 21h15.338C20.4 21 21 20.42 21 19.703V4.297C21 3.58 20.4 3 19.666 3h.003z">
                                     </path>
-                                </svg><span class="ml-4 hover:text-emerald-500">LinkedIn</span></a></li>
+                                </svg><span class="ml-4 hover:text-purple-500">LinkedIn</span></a></li>
                         <li class="pt-8 flex mb-10"><a
                                 class="group flex text-sm font-medium  transition hover:text-purple-500"
                                 href="mailto:#"><svg viewBox="0 0 24 24" aria-hidden="true"
-                                    class="h-6 w-6 flex-none fill-emerald-500 transition group-hover:fill-emerald-500">
+                                    class="h-6 w-6 flex-none fill-purple-500 transition group-hover:fill-purple-500">
                                     <path fill-rule="evenodd"
                                         d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z">
                                     </path>
@@ -151,7 +153,7 @@
             </div>
 
             <!-- map -->
-            <div class="w-auto mx-10 px-2 md:w-[700px] md:mt-10">
+            <div class="w-auto md:w-[700px] md:mt-10">
                 <iframe class="w-full"
                     src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d63536.08859572595!2d-0.24446555844629228!3d5.566194666834743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d5.6037168!2d-0.1869644!4m5!1s0xfdf97de25caa189%3A0xbf92b3a4c17ee033!2sgoogle%20map%20kaileys%20eatery%20korle%20gonno!3m2!1d5.5287428!2d-0.2310525!5e0!3m2!1sen!2sgh!4v1688791260279!5m2!1sen!2sgh"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
@@ -162,7 +164,7 @@
 
 
         <!-- Whatsapp -->
-        <div>
+        <div class="md:hidden">
             <a href="whatsapp://send?phone=233556721531"><svg viewBox="0 0 32 32" class="whatsapp-ico">
                     <path
                         d=" M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z"
