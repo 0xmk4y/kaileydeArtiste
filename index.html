@@ -10,6 +10,9 @@
     <title>KaileydaArtiste</title>
 </head>
 <body class="bg-gray-100">
+    <!-- <div id="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div> -->
     <!-- navbar -->
         <nav class="w-full z-20 top-0 left-0 fixed bg-gray-100">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -110,21 +113,21 @@
         </nav>
         
     <!-- hero -->
-    <div class="flex flex-col h-[350px] md:h-[550px] bg-cover bg-top md:bg-cover bg-center bg-no-repeat bg-top md:pt-4 mt-20"
-        style="background-image: url('img/bg-hero2.png');">
+    <div class="flex flex-col h-[350px] md:h-[650px] bg-cover bg-top md:bg-cover bg-center bg-no-repeat bg-top md:pt-4 mt-20"
+        style="background-image: url('img/bg-hero2.webp');">
 
         <div class="flex flex-col justify-center h-full text-center md:text-left md:mx-40 md:-mt-10">
             <div class="px-4">
                 <div class="flex flex-col text-left mb-4 md:mb-8">
-                    <p class="text-4xl md:text-6xl font-extrabold text-purple-700">Makeup</p>
-                    <p class="text-4xl md:text-6xl font-extrabold text-purple-700">Crea<span class="text-emerald-500">tivity</span></p>
-                    <p class="text-4xl md:text-6xl font-extrabold text-purple-700">Costumes</p>
-                    <p class="font-bold max-w-[170px] lg:max-w-full">Lorem, ipsum dolor sit amet consectetur adipisicing <br> elit. Repellat, facilis?</p>
+                    <p class="text-4xl md:text-6xl font-extrabold text-black">Makeup</p>
+                    <p class="text-4xl md:text-6xl font-extrabold text-black">Creativity</p>
+                    <p class="text-4xl md:text-6xl font-extrabold text-black">Costumes</p>
+                    <p class="font-bold max-w-[170px] lg:max-w-full">Lorem, ipsum dolor sit amet consectetur adipisicing elit facilis?</p>
                 </div>
-                <div class="flex">
+                <div class="flex ">
                     <a href="booking/">
                         <button type="button"
-                            class=" bg-gradient-to-r from-purple-800 via-purple-400 to-purple-600 hover:bg-gradient-to-br focus:ring-4 font-semibold focus:outline-none focus:ring-purple-300  shadow-lg shadow-purple-500/50 font-medium rounded-lg px-20 py-2.5 ">Book
+                            class=" bg-gradient-to-r from-purple-800 via-purple-600 to-purple-600 focus:ring-4 font-semibold focus:outline-none focus:ring-purple-300  shadow-lg shadow-purple-500/50 font-medium rounded-lg px-10 py-2.5 text-white">Book
                             Appointment</button>
                     </a>
                 </div>
@@ -134,17 +137,18 @@
     <br><br>
 
     <!-- Serives -->
-    <div class="flex justify-center p-10">
-        <h1 class="text-5xl font-extrabold text-purple-700">Services</h1>
+    <div class="flex justify-center p-10 mt-20 mb-10">
+        <h1 class="text-5xl font-extrabold text-black">Services</h1>
     </div>
 
     <!-- Services images -->
-    <div class="flex flex-col md:flex-row items-center justify-center">
-        <div class="max-w-sm p-6 bg-transparent border border-gray-200 rounded-lg shadow hover:shadow-purple-500">
-            <img class="rounded-full w-12 h-12 mb-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png"
-                alt="profile picture">
+    <div class="flex flex-col md:flex-row items-center justify-center md:space-x-10 md:px-10 space-y-10 md:space-y-0">
+        <div
+            class="max-w-sm p-6 bg-transparent border border-gray-200 rounded-lg shadow hover:shadow-gray-400 flex flex-col items-center text-center">
+            <img class="rounded-full w-12 h-12 mb-2 hover:scale-110 transition-transform duration-300"
+                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
             <a href="services/makeup.html">
-                <h5 class="mb-2 text-2xl font-semibold tracking-tight text-purple-500">Makeup</h5>
+                <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-700">Makeup</h5>
             </a>
             <p class="mb-3 font-normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, consequatur!</p>
             <a href="services/makeup.html" class="inline-flex items-center text-purple-600 hover:underline">
@@ -156,12 +160,13 @@
                 </svg>
             </a>
         </div>
-
-        <div class="max-w-sm p-6 bg-transparent border border-gray-200 rounded-lg shadow hover:shadow-purple-500">
-            <img class="rounded-full w-12 h-12 mb-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png"
-                alt="profile picture">
+        
+        <div
+            class="max-w-sm p-6 bg-transparent border border-gray-200 rounded-lg shadow hover:shadow-gray-400 flex flex-col items-center text-center">
+            <img class="rounded-full w-12 h-12 mb-2 hover:scale-110 transition-transform duration-300"
+                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
             <a href="services/costumes.html">
-                <h5 class="mb-2 text-2xl font-semibold tracking-tight text-purple-500">Costumes</h5>
+                <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-700">Costumes</h5>
             </a>
             <p class="mb-3 font-normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, consequatur!</p>
             <a href="services/costumes.html" class="inline-flex items-center text-purple-600 hover:underline">
@@ -174,11 +179,13 @@
             </a>
         </div>
 
-        <div class="max-w-sm p-6 bg-transparent border border-gray-200 rounded-lg shadow hover:shadow-purple-500">
-            <img class="rounded-full w-12 h-12 mb-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png"
-                alt="profile picture">
+
+        <div
+            class="max-w-sm p-6 bg-transparent border border-gray-200 rounded-lg shadow hover:shadow-gray-400 flex flex-col items-center text-center">
+            <img class="rounded-full w-12 h-12 mb-2 hover:scale-110 transition-transform duration-300"
+                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
             <a href="services/creative-drections.html">
-                <h5 class="mb-2 text-2xl font-semibold tracking-tight text-purple-500">Creative Directions</h5>
+                <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-700">Creative Directions</h5>
             </a>
             <p class="mb-3 font-normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, consequatur!</p>
             <a href="services/creative-drections.html" class="inline-flex items-center text-purple-600 hover:underline">
@@ -191,11 +198,13 @@
             </a>
         </div>
 
-        <div class="max-w-sm p-6 bg-transparent border border-gray-200 rounded-lg shadow hover:shadow-purple-500">
-            <img class="rounded-full w-12 h-12 mb-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png"
-                alt="profile picture">
+
+        <div
+            class="max-w-sm p-6 bg-transparent border border-gray-200 rounded-lg shadow hover:shadow-gray-400 flex flex-col items-center text-center">
+            <img class="rounded-full w-12 h-12 mb-2 hover:scale-110 transition-transform duration-300"
+                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
             <a href="services/royal-sales.html">
-                <h5 class="mb-2 text-2xl font-semibold tracking-tight text-purple-500">Royal Sales</h5>
+                <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-700">Royal Sales</h5>
             </a>
             <p class="mb-3 font-normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, consequatur!</p>
             <a href="services/royal-sales.html" class="inline-flex items-center text-purple-600 hover:underline">
@@ -277,15 +286,15 @@
 
 
     <!-- Gallery -->
-    <div class="flex justify-center p-10">
-        <h1 class="text-5xl font-extrabold text-purple-700">Portfolio</h1>
+    <div class="flex justify-center p-10 mt-20 mb-10">
+        <h1 class="text-5xl font-extrabold text-black">Portfolio</h1>
     </div>
 
     <!-- Gallery images -->
     <div class="container mb-20 grid grid-cols-2 md:grid-cols-4 px-2 lg:pl-10 md:px-0 w-fit">
         <div class="box w-[170px] md:w-[275px]">
             <div class="imgBx">
-                <img src="img/services/1.jpg">
+                <img src="img/services/1.webp">
             </div>
             <div class="content">
                 <div>
@@ -297,7 +306,7 @@
         </div>
         <div class="box w-[170px] md:w-[275px]">
             <div class="imgBx">
-                <img src="img/services/2.png">
+                <img src="img/services/2.webp">
             </div>
             <div class="content">
                 <div>
@@ -309,7 +318,7 @@
         </div>
         <div class="box w-[170px] md:w-[275px]">
             <div class="imgBx">
-                <img src="img/services/3.png">
+                <img src="img/services/3.webp">
             </div>
             <div class="content">
                 <div>
@@ -321,7 +330,7 @@
         </div>
         <div class="box w-[170px] md:w-[275px]">
             <div class="imgBx">
-                <img src="img/services/4.png">
+                <img src="img/services/4.webp">
             </div>
             <div class="content">
                 <div>
@@ -457,8 +466,8 @@
         </div>
     </div> -->
 
-
-    <div class="mx-auto max-w-7xl lg:px-8">
+    <!-- footer -->
+    <div class="mx-auto max-w-7xl lg:px-8 mt-40">
         <div class="border-t border-zinc-100 pb-16 pt-10 /40">
             <div class="relative px-4 sm:px-8 lg:px-12">
                 <div class="mx-auto max-w-2xl lg:max-w-5xl">
