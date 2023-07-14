@@ -26,121 +26,143 @@
         input[type="number"] {
             -moz-appearance: textfield;
         }
+
+
+
+        .invalid-feedback,
+        .empty-feedback {
+        display: none;
+        }
+
+        .was-validated :placeholder-shown:invalid ~ .empty-feedback {
+        display: block;
+        }
+
+        .was-validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
+        display: block;
+        }
+
+        .is-invalid,
+        .was-validated :invalid {
+        border-color: #dc3545;
+        }
+
+
     </style>
 
     <body class="bg-gray-100">
-        <!-- navbar -->
-        <!-- <nav class="w-full z-20 top-0 left-0 mb-5">
-            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="https://flowbite.com/" class="flex items-center">
-                    <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo">
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap">Flowbite</span>
-                </a>
-                <div class="flex md:order-2">
-                    <a href="https://example.com/booking">
-                        <button type="button"
-                            class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 self-center font-semibold whitespace-nowrap">Booking</button>
-                    </a>
-                    <button data-collapse-toggle="navbar-sticky" type="button"
-                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200   "
-                        aria-controls="navbar-sticky" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 17 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M1 1h15M1 7h15M1 13h15" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                    <ul
-                        class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-gradient-to-r from-purple-600 to-emerald-600 ">
-                        <li>
-                            <a href="../index.html"
-                                class="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded md:bg-transparent md:p-0 md:text-2xl font-semibold"
-                                aria-current="page">Home</a>
-                        </li>
-                        <li>
-                            <a href="../about.html"
-                                class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 text-white md:text-2xl font-semibold">About</a>
-                        </li>
-                        <li>
-                            <a href="../services.html"
-                                class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 text-white md:text-2xl font-semibold">Services</a>
-                        </li>
-                        <li>
-                            <a href="../contact.html"
-                                class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 text-white md:text-2xl font-semibold">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav> -->
-
-
-
-
-
-        <!-- form -->
-
-        <!-- Select services -->
-
+       
         <div class="flex flex-col justify-center items-center my-10">
-            <!-- book now -->
-            <h1 class="mb-10 font-bold text-4xl">Book an Appointment</h1>
-            <!-- <label for="services" class="block mb-2 text-sm font-medium text-gray-900">Select Service</label>
-            <div class="mb-5">
-                <select id="services"
-                    class="bg-purple-100 border border-purple-700 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 d">
-                    <option>Makeup</option>
-                    <option>Costumes</option>
-                    <option>Creative directions</option>
-                    <option>Royal Package</option>
-                </select>
-            </div> -->
-            <!-- date -->
+        
+            <h1 class="font-bold text-4xl">Book an Appointment</h1>
+            
 
             <div class="flex justify-center relative top-10">
                 <img src="../img/gallery/gallery-01.PNG" alt="" class="rounded-full w-20 h-20">
             </div>
-            <form id="myForm" class="space-y-4 w-[400px] border-2 p-10 rounded-3xl bg-gray-200">
-    <div class="mt-5">
-        <label for="underline_select" class="sr-only">Underline select</label>
-        <select id="underline_select"
-            class="block py-2.5 px-0 w-full bg-transparent border-0 border-b-2 appearance-none  focus:outline-none focus:ring-0 focus:border-gray-200 text-center">
-            <option selected>Please Select Services</option>
-            <option value="Costumes">Costumes</option>
-            <option value="Creative Directions">Creative Directions</option>
-            <option value="Makeup">Makeup</option>
-        </select>
-    </div>
 
-    <div class="flex flex-col">
-        <label for="full_name">Full name</label>
-        <input type="text" name="full_name" id="full_name" class="border-0 bg-transparent border-b-2 focus:ring-transparent focus:border-purple-500 px-0">
-    </div>
+            <div class="flex items-center mt-20">
+                <div class="container mx-auto">
+                    <div class="max-w-xl mx-auto bg-white p-5 rounded-md shadow-2xl">
+                        <div class="text-center">
+                            <p class="text-gray-400 ">
+                                Fill up the form below to send us a message.
+                            </p>
+                        </div>
+                        <div class="m-7">
+                            <form action="https://api.web3forms.com/submit" method="POST" id="form" class="needs-validation"
+                                novalidate>
+                                <input type="hidden" name="access_key" value="3bca76f5-0cf0-4f00-a232-08c938daa0b2" />
+                                <input type="hidden" name="subject" value="A customer has requested a booking" />
+                                <input type="checkbox" name="botcheck" id="" style="display: none;" />
 
-    <div class="flex flex-col">
-        <label for="email">Email</label>
-        <input type="text" name="email" id="email" class="border-0 bg-transparent border-b-2 focus:ring-transparent focus:border-purple-500 px-0">
-    </div>
-    <div class="flex flex-col">
-        <label for="phone">Phone number</label>
-        <input type="text" name="phone" id="phone" class="border-0 bg-transparent border-b-2 focus:ring-transparent focus:border-purple-500 px-0">
-    </div>
+                                <div class="pb-10">
+                                    <label for="service_select" class="sr-only">Select Service</label>
+                                    <select id="service_select" name="service"
+                                        class="block py-2.5 px-0 w-full bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-purple-400 text-center">
+                                        <option value="" selected>Please Select Service</option>
+                                        <option value="Costumes">Costumes</option>
+                                        <option value="Creative Directions">Creative Directions</option>
+                                        <option value="Makeup">Makeup</option>
+                                    </select>
+                                </div>
 
-    <div class="flex justify-between mx-5">
-        <button type="button" id="cancelBtn"
-            class="text-white bg-purple-700 hover:bg-purple-800 text-purple-700 focus:outline-none rounded-full px-4 py-2 text-center self-center font-semibold">Cancel</button>
-        
-        <button type="button" id="submitBtn"
-            class="text-white bg-purple-700 hover:bg-purple-800 text-purple-700 focus:outline-none rounded-full px-4 py-2 text-center self-center font-semibold">Submit</button>
-    </div>
-</form>
+                                <div class="flex mb-6 space-x-4">
+                                    <div class="w-full md:w-1/2">
+                                        <label for="fname" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">First
+                                            Name</label>
+                                        <input type="text" name="name" id="first_name" placeholder="John" required
+                                            class="w-full px-3 py-2 placeholder-gray-300 border-0 border-b-2 focus:ring-transparent focus:border-purple-400" />
+                                        <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                                            Please provide your first name.
+                                        </div>
+                                    </div>
+                                    <div class="w-full md:w-1/2">
+                                        <label for="lname" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Last
+                                            Name</label>
+                                        <input type="text" name="last_name" id="lname" placeholder="Doe" required
+                                            class="w-full px-3 py-2 placeholder-gray-300 border-0 border-b-2 focus:ring-transparent focus:border-purple-400" />
+                                        <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                                            Please provide your last name.
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="flex mb-6 space-x-4">
+                                    <div class="w-full md:w-1/2">
+                                        <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email
+                                            Address</label>
+                                        <input type="email" name="email" id="email" placeholder="you@company.com" required
+                                            class="w-full px-3 py-2 placeholder-gray-300 border-0 border-b-2 focus:ring-transparent focus:border-purple-400" />
+                                        <div class="empty-feedback text-red-400 text-sm mt-1">
+                                            Please provide your email address.
+                                        </div>
+                                        <div class="invalid-feedback text-red-400 text-sm mt-1">
+                                            Please provide a valid email address.
+                                        </div>
+                                    </div>
+            
+                                    <div class="w-full md:w-1/2">
+                                        <label for="phone" class="block text-sm mb-2 text-gray-600 dark:text-gray-400">Phone
+                                            Number</label>
+                                        <input type="text" name="phone" id="phone" placeholder="+1 (555) 1234-567" required
+                                            class="w-full px-3 py-2 placeholder-gray-300 border-0 border-b-2 focus:ring-transparent focus:border-purple-400" />
+            
+                                        <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                                            Please provide your phone number.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-6">
+                                    <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Your
+                                        Message</label>
+            
+                                    <textarea rows="5" name="message" id="message" placeholder="Your Message"
+                                        class="w-full px-3 py-2 placeholder-gray-300 border-2 focus:ring-transparent focus:border-purple-400"
+                                        required></textarea>
+                                    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                                        Please enter your message.
+                                    </div>
+                                </div>
+                                <div class="mb-6">
+                                    <button type="submit"
+                                        class="w-full px-3 py-4 text-white bg-purple-500 focus:bg-indigo-600 focus:outline-none">
+                                        Send Message
+                                    </button>
+                                </div>
+                                <p class="text-base text-center text-gray-400" id="result"></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="successMessage"></div>
+
             
             <!-- note -->
-            <div class="flex flex-col justify-center w-[400px] mt-10 px-2 py-5 bg-gray-200 rounded-2xl">
-                <p>For immediate enquiries please click on the Whatsapp button bellow to send us a text.</p>
+            <div class="flex flex-col justify-center md:hidden mt-10  p-5 bg-gray-200 rounded-2xl">
+                <p>For immediate enquiries please click on the Whatsapp button below to send us a text.</p>
                 <p>We respone immediately</p>
             </div>
 
@@ -154,49 +176,81 @@
             </div>
         </div>
 
-
-
-
-
-
     <script>
-        // Event listener for Submit button
-        const submitBtn = document.getElementById('submitBtn');
-        submitBtn.addEventListener('click', function () {
-            // Get form data
-            const form = document.getElementById('myForm');
-            const formData = new FormData(form);
+           (function () {
+                "use strict";
+                /*
+                 * Form Validation
+                 */
 
-            // Create XMLHttpRequest object
-            const xhr = new XMLHttpRequest();
+                // Fetch all the forms we want to apply custom validation styles to
+                const forms = document.querySelectorAll(".needs-validation");
+                const result = document.getElementById("result");
+                // Loop over them and prevent submission
+                Array.prototype.slice.call(forms).forEach(function (form) {
+                    form.addEventListener(
+                        "submit",
+                        function (event) {
+                            if (!form.checkValidity()) {
+                                event.preventDefault();
+                                event.stopPropagation();
 
-            // Define request parameters
-            xhr.open('POST', 'process.php', true);
+                                form.querySelectorAll(":invalid")[0].focus();
+                            } else {
+                                /*
+                                 * Form Submission using fetch()
+                                 */
 
-            // Set up event handler for successful request
-            xhr.onload = function () {
-                if (xhr.status === 200) {
-                    // Request successful, do something with the response
-                    console.log(xhr.responseText);
-                }
-            };
+                                const formData = new FormData(form);
+                                event.preventDefault();
+                                event.stopPropagation();
+                                const object = {};
+                                formData.forEach((value, key) => {
+                                    object[key] = value;
+                                });
+                                const json = JSON.stringify(object);
+                                result.innerHTML = "Please wait...";
 
-            // Set up event handler for error
-            xhr.onerror = function () {
-                // Request error, handle the error scenario
-                console.log('An error occurred while processing the request.');
-            };
+                                fetch("https://api.web3forms.com/submit", {
+                                    method: "POST",
+                                    headers: {
+                                        "Content-Type": "application/json",
+                                        Accept: "application/json"
+                                    },
+                                    body: json
+                                })
+                                    .then(async (response) => {
+                                        let json = await response.json();
+                                        if (response.status == 200) {
+                                            result.innerHTML = json.message;
+                                            result.classList.remove("text-gray-500");
+                                            result.classList.add("text-green-500");
+                                        } else {
+                                            console.log(response);
+                                            result.innerHTML = json.message;
+                                            result.classList.remove("text-gray-500");
+                                            result.classList.add("text-red-500");
+                                        }
+                                    })
+                                    .catch((error) => {
+                                        console.log(error);
+                                        result.innerHTML = "Something went wrong!";
+                                    })
+                                    .then(function () {
+                                        form.reset();
+                                        form.classList.remove("was-validated");
+                                        setTimeout(() => {
+                                            result.style.display = "none";
+                                        }, 5000);
+                                    });
+                            }
+                            form.classList.add("was-validated");
+                        },
+                        false
+                    );
+                });
+            })();
 
-            // Send the form data
-            xhr.send(formData);
-        });
-
-        // Event listener for Cancel button
-        const cancelBtn = document.getElementById('cancelBtn');
-        cancelBtn.addEventListener('click', function () {
-            // Cancel button click handler
-            console.log('Cancel button clicked.');
-        });
     </script>
 
 

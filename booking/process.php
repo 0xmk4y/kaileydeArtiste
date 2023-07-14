@@ -1,14 +1,14 @@
 <?php
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Retrieve form data
-    $selectedService = $_POST['underline_select'];
-    $fullName = $_POST['full_name'];
+    // Retrieve the form data
     $email = $_POST['email'];
-    $phoneNumber = $_POST['phone'];
 
+    // Process the data or perform any necessary actions
 
-    echo $selectedService;
-
+    // Echo the email value as a response
+    echo 'meassage sent successful';
+} else {
+    // If the request method is not POST, return an error message
+    echo 'Invalid request method.';
 }
 ?>
