@@ -27,3 +27,14 @@ imageDescriptions.forEach(function (description) {
 // }, delay);
 
 
+// hover dropdown
+    const dropdownTrigger = document.querySelector('.dropdown-trigger');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+
+    dropdownTrigger.addEventListener('mouseenter', () => {
+        dropdownMenu.classList.add('show');
+    });
+
+    dropdownTrigger.addEventListener('mouseleave', () => {
+        dropdownMenu.classList.remove('show');
+    });

@@ -51,26 +51,29 @@
                         </li>
         
                         <li>
-                            <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-transparent" data-inactive-classes="">
+                            <div id="accordion-flush" class="dropdown" data-accordion="collapse" data-active-classes="bg-transparent"
+                                data-inactive-classes="">
                                 <h2 id="accordion-flush-heading-1">
-                                    <button class="flex items-center text-white md:text-2xl font-semibold pl-3 my-2 md:my-0  w-full"
-                                        data-accordion-target="#accordion-flush-body-1" aria-expanded="false"
-                                        aria-controls="accordion-flush-body-1">
-                                        <span class="mr-2">Services</span>
+                                    <span
+                                        class="dropdown-trigger flex items-center text-white md:text-2xl font-semibold pl-3 my-2 md:my-0 w-full">
+                                        <span class="mr-2 md:hover:text-purple-700">Services</span>
                                         <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
                                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M9 5 5 1 1 5" />
                                         </svg>
-                                    </button>
+                                    </span>
                                 </h2>
-                                <div id="accordion-flush-body-1" class="hidden md:fixed" aria-labelledby="accordion-flush-heading-1">
+                                <div id="accordion-flush-body-1" class="dropdown-menu hidden md:fixed"
+                                    aria-labelledby="accordion-flush-heading-1">
                                     <div class="md:py-2 text-left relative pl-4 md:pl-0 flex flex-col bg-gray-200 md:w-[300px]">
-                                        <a href="services/makeup.html" class="md:hover:bg-purple-500 p-2 font-bold md:hover:text-white">Makeup</a>
-                                        <a href="services/costumes.html" class="md:hover:bg-purple-500 p-2 font-bold md:hover:text-white">Costumes</a>
-                                        <a href="services/creative-drections.html" class="md:hover:bg-purple-500 p-2 font-bold md:hover:text-white">Creative
-                                            Directions</a>
-                                        <a href="services/royal-sales.html" class="md:hover:bg-purple-500 p-2 font-bold md:hover:text-white">Royal Sales</a>
+                                        <a href="services/makeup.html" class="p-2 font-bold md:hover:text-white md:hover:bg-purple-500">Makeup</a>
+                                        <a href="services/costumes.html"
+                                            class="p-2 font-bold md:hover:text-white md:hover:bg-purple-500">Costumes</a>
+                                        <a href="services/creative-drections.html"
+                                            class="p-2 font-bold md:hover:text-white md:hover:bg-purple-500">Creative Directions</a>
+                                        <a href="services/royal-sales.html" class="p-2 font-bold md:hover:text-white md:hover:bg-purple-500">Royal
+                                            Sales</a>
                                     </div>
                                 </div>
                             </div>

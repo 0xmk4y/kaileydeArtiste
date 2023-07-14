@@ -297,4 +297,58 @@
 }
 
 
-/*  */
+/* hover dropdown */
+/* ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.drop {
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+.drop:hover {
+    background: red;
+    cursor: pointer;
+}
+
+ul .drop ul {
+    background: orange;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+}
+
+ul .drop:hover>ul,
+ul .drop ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+ul .drop ul .drop {
+    clear: both;
+    width: 100%;
+} */
+
+
+/* hover dropdown */
+
+.dropdown-menu {
+    display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
