@@ -9,7 +9,10 @@
         <link rel="stylesheet" href="../style.css">
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/datepicker.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0-beta1/dist/css/index.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
 
         <link rel="stylesheet" href="style.css">
         <title>KaileydaArtiste</title>
@@ -69,7 +72,7 @@
                                 Fill up the form below to send us a message.
                             </p>
                         </div>
-                        <div class="m-7">
+                        <div class="m-2">
                             <form action="https://api.web3forms.com/submit" method="POST" id="form" class="needs-validation"
                                 novalidate>
                                 <input type="hidden" name="access_key" value="3bca76f5-0cf0-4f00-a232-08c938daa0b2" />
@@ -78,7 +81,7 @@
 
                                 <div class="pb-10">
                                     <label for="service_select" class="sr-only">Select Service</label>
-                                    <select id="service_select" name="service"
+                                    <select id="service_select" name="service" onchange="updatePrice()"
                                         class="block py-2.5 px-0 w-full bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-purple-400 text-center">
                                         <option value="" selected>Please Select Service</option>
                                         <option value="Costumes">Costumes</option>
@@ -87,9 +90,9 @@
                                     </select>
                                 </div>
 
-                                <div class="flex mb-6 space-x-4">
+                                <div class="flex mb-6 space-x-2">
                                     <div class="w-full md:w-1/2">
-                                        <label for="fname" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">First
+                                        <label for="fname" class="block mb-2 text-sm text-gray-600">First
                                             Name</label>
                                         <input type="text" name="name" id="first_name" placeholder="John" required
                                             class="w-full px-3 py-2 placeholder-gray-300 border-0 border-b-2 focus:ring-transparent focus:border-purple-400" />
@@ -108,7 +111,7 @@
                                     </div>
                                 </div>
             
-                                <div class="flex mb-6 space-x-4">
+                                <div class="flex mb-6 space-x-2">
                                     <div class="w-full md:w-1/2">
                                         <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email
                                             Address</label>
@@ -123,9 +126,9 @@
                                     </div>
             
                                     <div class="w-full md:w-1/2">
-                                        <label for="phone" class="block text-sm mb-2 text-gray-600 dark:text-gray-400">Phone
+                                        <label for="phone" class="block text-sm mb-2 text-gray-600">Phone
                                             Number</label>
-                                        <input type="text" name="phone" id="phone" placeholder="+1 (555) 1234-567" required
+                                        <input type="text" name="phone" id="phone" placeholder="(233) 42 2345 234" required
                                             class="w-full px-3 py-2 placeholder-gray-300 border-0 border-b-2 focus:ring-transparent focus:border-purple-400" />
             
                                         <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
@@ -133,21 +136,47 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mb-6">
-                                    <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Your
-                                        Message</label>
-            
-                                    <textarea rows="5" name="message" id="message" placeholder="Your Message"
-                                        class="w-full px-3 py-2 placeholder-gray-300 border-2 focus:ring-transparent focus:border-purple-400"
-                                        required></textarea>
-                                    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-                                        Please enter your message.
+                                <div class="flex mb-6 space-x-2">
+                                    <!-- date -->
+                                    <div class="relative" data-te-datepicker-init data-te-input-wrapper-init>
+                                        <input type="text" id="date" name="date"
+                                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none"
+                                            placeholder="" />
+                                        <label for="date"
+                                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none">Pick
+                                            a date</label>
+                                    </div>
+                                    <!-- time -->
+                                    <div class="relative" data-te-timepicker-init data-te-input-wrapper-init>
+                                        <input type="text" id="time" name="time"
+                                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" />
+                                        <label for="time"
+                                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none">Time</label>
+                                    </div>
+
+                                </div>
+                                <!-- cost -->
+                                <div>
+                                    <!-- base price -->
+                                    <div class="flex justify-between p-2">
+                                        <p class="font-bold">Base Cost</p>
+                                        <p>GH <span id="price">0.00</span></p>
+                                    </div>
+                                    <!-- discount -->
+                                    <div class="flex justify-between p-2">
+                                        <p class="font-bold">Discount</p>
+                                        <p>GH <span id="discount" name="Discount">0.00</span></p>
+                                    </div>
+                                    <!-- total cost -->
+                                    <div class="flex justify-between p-2 bg-gray-200 mb-5">
+                                        <p class="font-bold">Total Cost</p>
+                                        <p>GH <span id="total" name="totalCost">0.00</span></p>
                                     </div>
                                 </div>
                                 <div class="mb-6">
                                     <button type="submit"
                                         class="w-full px-3 py-4 text-white bg-purple-500 focus:bg-indigo-600 focus:outline-none">
-                                        Send Message
+                                        Confirm
                                     </button>
                                 </div>
                                 <p class="text-base text-center text-gray-400" id="result"></p>
@@ -177,6 +206,33 @@
         </div>
 
     <script>
+
+        // update price
+        function updatePrice() {
+                var serviceSelect = document.getElementById("service_select");
+                var baseprice = document.getElementById("price");
+                var discount = document.getElementById("discount");
+                var total = document.getElementById("total");
+
+                var selectedService = serviceSelect.value;
+                var price = 0;
+
+                // Update price based on the selected service
+                if (selectedService === "Makeup") {
+                    price = 10;
+                } else if (selectedService === "Costumes") {
+                    price = 20;
+                }    
+                else if (selectedService === "Creative Directions") {
+                    price = 40;
+                }
+
+                baseprice.innerHTML = price;
+                total.innerHTML = price;
+                //console.log(price)
+            }
+
+        
            (function () {
                 "use strict";
                 /*
@@ -251,10 +307,14 @@
                 });
             })();
 
+            // time picker
+            initTE({ Input, Timepicker });
+
+
+
     </script>
 
-
-
+        <script src="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0-beta2/dist/js/tw-elements.umd.min.js"></script>
         <script src="../js/script.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
     </body>
