@@ -1,10 +1,14 @@
 <?php
-    session_start();
-
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
     use PHPMailer\PHPMailer\SMTP;
 
+    session_start();
+
+if(!$_SESSION['service']){
+    header('Location: booking.html');
+    die();
+};
     $subject = $_SESSION["subject"];
     $service = $_SESSION["service"];
     $name = $_SESSION["name"];
@@ -47,19 +51,17 @@ try {
 
     // Content
     $mail->isHTML(true); // Set email format to HTML
-    $mail->Subject = 'New Contact Message from Kailey Eatery Website';
-    $mail->Body    = '<html><b>Dear Kailey</b>,<br>
-
-    <h4>You have received a new order from your website. Here are the details:</h4><br>
-    
-    <b>Name:</b> '.' <br>
-    <b>Email: </b>'.' <br>
-    <b>Number of Guests: </b>'.' <br>
-    <b>Message: </b>'.' <br><br>
-    
-    <b>Please review the order and follow up with the customer as soon as possible.</b>
-    
-    </html>';
+    $mail->Subject = 'New Booking from kaileydaArtiste.com';
+    $mail->Body = '<html><b>Dear Kailey</b>,<br>
+    <h4>You have received a new booking from your website. Here are the details:</h4><br>
+                    <b>Service: </b>'.$service.'<br>
+                    <b>Name:</b> '.$name.' '.$last_name.'<br>
+                    <b>Email: </b>'.$email.'<br>
+                    <b>Phone: </b>'.$phone.'<br>
+                    <b>Date: </b>'.$date.'<br>
+                    <b>Time: </b>'.$time.'<br><br>
+                    <b>Please review the booking and follow up with the customer as soon as possible.</b>
+                    </html>';
 
 
     $mail->send();
@@ -75,6 +77,53 @@ try {
    
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0-beta1/dist/css/index.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="style.css">
+        <title>KaileydaArtiste</title>
+    </head>
+
+    <body>
+
+            
+        <section class="flex flex-col justify-center items-center h-screen space-y-10 ">
+            <div class="flex justify-center items-center -mt-20">
+                <img src="../img/success-35.svg" alt="" class="px-10" style="width: 400px; min-width: 200px;">
+            </div>
+            <h2 class="font-bold text-2xl">Booking Sucessfull&#127881;</h2>
+        </section>
+
+
+        <!-- JavaScript code for redirection -->
+        <script>
+            setTimeout(function () {
+                window.location.href = '../index.html';
+            }, 3000); // 3 seconds delay
+        </script>
+
+
+        <script src="../js/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+    </body>
+
+
+
+</html>
 
 
 

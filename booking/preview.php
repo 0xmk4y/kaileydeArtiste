@@ -1,10 +1,12 @@
 <?php
     session_start();
 
+    // Check if the request method is not POST
+    if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+        header("Location: booking.html");
+        exit;
+    }
 
-    
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Retrieve the POST data
     $subject = $_POST["subject"];
     $service = $_POST["service"];
@@ -15,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $date = $_POST["date"];
     $time = $_POST["time"];
 
-    // session variables
+    // Store the form data in session variables
     $_SESSION["subject"] = $subject;
     $_SESSION["service"] = $service;
     $_SESSION["name"] = $name;
@@ -25,26 +27,25 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $_SESSION["date"] = $date;
     $_SESSION["time"] = $time;
 
-    if (!isset($_SESSION["subject"])) {
-    header("Location: ../index.html");
-    exit;
-}
+    // Check if the subject session variable is not set
+    // If not set, redirect the user to the homepage
+    // if (!isset($_SESSION["subject"])) {
+    //     header("Location: ../index.html");
+    //     exit;
+    // }
 
     $discount = 5;
     $price = 0;
 
-    if($service == "Makeup"){
+    if ($service == "Makeup") {
         $price = 10;
-    }elseif($service == "Costumes"){
+    } elseif ($service == "Costumes") {
         $price = 20;
-    }elseif($price = "Creative Directions"){
+    } elseif ($service == "Creative Directions") {
         $price = 30;
-    };
+    }
 
     $total = $price - $discount;
-
-    // echo $totalCost;
-}
 ?>
 
 <!DOCTYPE html>
