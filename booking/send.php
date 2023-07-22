@@ -14,7 +14,7 @@ if(!$_SESSION['service']){
     $name = $_SESSION["name"];
     $last_name = $_SESSION["last_name"];
     $email = $_SESSION["email"];
-    $email = $_SESSION["phone"];
+    $phone = $_SESSION["phone"];
     $date = $_SESSION["date"];
     $time = $_SESSION["time"];
 
@@ -52,16 +52,19 @@ try {
     // Content
     $mail->isHTML(true); // Set email format to HTML
     $mail->Subject = 'New Booking from kaileydaArtiste.com';
-    $mail->Body = '<html><b>Dear Kailey</b>,<br>
-    <h4>You have received a new booking from your website. Here are the details:</h4><br>
-                    <b>Service: </b>'.$service.'<br>
-                    <b>Name:</b> '.$name.' '.$last_name.'<br>
-                    <b>Email: </b>'.$email.'<br>
-                    <b>Phone: </b>'.$phone.'<br>
-                    <b>Date: </b>'.$date.'<br>
-                    <b>Time: </b>'.$time.'<br><br>
-                    <b>Please review the booking and follow up with the customer as soon as possible.</b>
-                    </html>';
+    $mail->Body = ' <html>
+                <body style="color:rgb(77, 77, 77);">
+                    <b   style="font-size:2rem;">Dear Kailey</b>,<br>
+                    <h4 style="font-size:1.2rem" ;>You have received a new booking from your website. Here are the details:</h4>
+                    <p style="font-size: 20px;">Service: <span> '.$service.'</span></p>
+                    <p style="font-size: 20px;">Name: <span>'.$name.' '.$last_name.'</span></p>
+                    <p style="font-size: 20px;">Email: <span> '.$email.'</span></p>
+                    <p style="font-size: 20px;">Phone: <span>'.$phone.'</span></p>
+                    <p style="font-size: 20px;">Date: <span> '.$date.'</span></p>
+                    <p style="font-size: 20px;">Time: <span> '.$time.'</span></p><br>
+                    <b style="font-size:1.2rem;">Please review the booking and follow up with the customer as soon as possible.</b>                    
+                </body>
+            </html>';
 
 
     $mail->send();
@@ -110,11 +113,11 @@ try {
 
 
         <!-- JavaScript code for redirection -->
-        <script>
+        <!-- <script>
             setTimeout(function () {
                 window.location.href = '../index.html';
-            }, 3000); // 3 seconds delay
-        </script>
+            }, 3000); 
+        </script> -->
 
 
         <script src="../js/script.js"></script>
